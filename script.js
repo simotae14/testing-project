@@ -4,7 +4,8 @@ const googleDatabase = [
   'flowers.com',
   'animals.com',
   'catpictures.com',
-  'myfavouritecats.com'
+  'myfavouritecats.com',
+  'myfavouritecats2.com',
 ];
 // basic google search algorhitm
 const googleSearch = searchInput => {
@@ -14,4 +15,4 @@ const googleSearch = searchInput => {
   // return just the first 3 results
   return matches.length > 3 ? matches.slice(0,3) : matches;
 }
-console.log(googleSearch('soup'));
+console.log(googleSearch('cat'));
