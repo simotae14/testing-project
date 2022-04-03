@@ -6,11 +6,10 @@ const {
 } = require('./script2');
 
 // use the async/await function
-it('calls swapi to get people', (done) => {
+it('calls swapi to get people', () => {
   expect.assertions(1);
-  getPeople(fetch).then(({ count }) => {
+  return getPeople(fetch).then(({ count }) => {
     expect(count).toEqual(82);
-    done();
   });
 });
 
