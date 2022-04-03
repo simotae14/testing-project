@@ -15,7 +15,9 @@ it('calls swapi to get people', () => {
 
 // use the Promise
 it('calls swapi to get people with a promise', () => {
-  getPeoplePromise(fetch).then(({ count }) => {
+  expect.assertions(2);
+  return getPeoplePromise(fetch).then(({ count, results }) => {
     expect(count).toEqual(82);
+    expect(results.length).toBeGreaterThan(5);
   });
 });
